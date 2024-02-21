@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit and Discharge Time Worksheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Admit and Discharge Time Worksheet</h2>
+        <form id="admitDischargeForm">
+            <label for="admitTime">Admit Time:</label>
+            <select id="admitTime">
+                <option value="08:00">08:00 AM</option>
+                <option 
+value="08:30">08:30 AM</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="09:30">09:30 AM</option>
+                <option value="10:00">10:00 AM</option>
+<option value="10:30">10:30 AM</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="dischargeTime">Discharge Time:</label>
+            <select id="dischargeTime">
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('admitDischargeForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var admitTime = document.getElementById('admitTime').value;
+            var dischargeTime = document.getElementById('dischargeTime').value;
+            alert("Admit Time: " + admitTime + "\nDischarge Time: " + dischargeTime);
+        });
+    </script>
+
+</body>
+
+</html>
